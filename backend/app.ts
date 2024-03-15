@@ -1,16 +1,16 @@
-import express, { Request, Response } from "express";
-import cors from "cors";
-import "dotenv/config";
+import express, { Response } from 'express'
+import cors from 'cors'
+import 'dotenv/config'
 
-const app = express();
+const app = express()
 
-app.use(express.json());
-app.use(cors());
+app.use(express.json())
+app.use(cors())
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({
-    message: "Welcome to backend",
-  });
-});
+app.get('/', (_, res: Response) => {
+    res.json({
+        message: 'Welcome to backend , Lets gets started',
+    })
+})
 
-export { app };
+export { app }
