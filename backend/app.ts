@@ -1,16 +1,20 @@
-import express, { Response } from 'express'
-import cors from 'cors'
-import 'dotenv/config'
+import express, { Response } from 'express';
+import cors from 'cors';
+import 'dotenv/config';
+import userRouter from 'routes/userRoutes';
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true, limit: '16kb' }));
+app.use(cors());
 
 app.get('/', (_, res: Response) => {
-    res.json({
-        message: 'Welcome to backend , Lets gets started',
-    })
-})
+  res.json({
+    message: 'Welcome to backend , Lets gets started',
+  });
+});
 
-export { app }
+app.use('/api/user', userRouter);
+
+export { app };
