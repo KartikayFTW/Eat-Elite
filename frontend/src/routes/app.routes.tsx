@@ -1,4 +1,5 @@
 import AppLayout from '@/layouts/AppLayout';
+import AuthCallbackPage from '@/pages/AuthCallbackPage';
 import HomePage from '@/pages/HomePage';
 import { Route, Routes } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ const AppRoutes = () => {
           </AppLayout>
         }
       />
+      <Route path="/auth-callback" element={<AuthCallbackPage />} />
     </Routes>
   );
 };
