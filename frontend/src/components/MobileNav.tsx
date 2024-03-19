@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Sheet,
   SheetContent,
@@ -6,16 +5,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './ui/sheet';
-import { Menu, User } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Separator } from './ui/separator';
 import { Button } from './ui/button';
 import useLogin from '@/hooks/useLogin';
 import { Skeleton } from './ui/skeleton';
-import UserNavMenu from './UserNavMenu';
 import MobileNavMenu from './MobileNavMenu';
 
 const MobileNav = () => {
-  const { loginHandler, isAuthenticated, isLoading, user } = useLogin();
+  const { loginHandler, isAuthenticated, isLoading } = useLogin();
   if (isLoading) {
     return <Skeleton className="w-[40px] h-[40px] rounded-full" />;
   }

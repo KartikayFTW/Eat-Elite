@@ -1,5 +1,3 @@
-import React from 'react';
-// import hero from '@/assets/hero.webp';
 import hero from '@/assets/hero.png';
 
 const Hero = () => {
