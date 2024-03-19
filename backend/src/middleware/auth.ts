@@ -36,7 +36,6 @@ export const jwtParse = async (
   try {
     const decoded = jwt.decode(token) as jwt.JwtPayload;
     const auth0Id = decoded.sub;
-    console.log('auth0Id', auth0Id);
     const user = await User.findOne({
       auth0Id,
     });
