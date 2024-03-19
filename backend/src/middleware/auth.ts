@@ -2,7 +2,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { auth } from 'express-oauth2-jwt-bearer';
 import jwt from 'jsonwebtoken';
-import User from 'models/user.models';
+import User from '../models/user.models';
 
 const AUTH0_AUDIENCE = process.env.AUTH0_AUDIENCE;
 const AUTH0_BASE_URL = process.env.AUTH0_BASE_URL;

@@ -1,7 +1,7 @@
 import express, { Response } from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import userRouter from 'routes/userRoutes';
+import userRouter from './src/routes/userRoutes';
 
 const app = express();
 
@@ -12,6 +12,11 @@ app.use(cors());
 app.get('/', (_, res: Response) => {
   res.json({
     message: 'Welcome to backend , Lets gets started',
+  });
+});
+app.get('/health', (_, res: Response) => {
+  res.send({
+    message: 'health OK!',
   });
 });
 

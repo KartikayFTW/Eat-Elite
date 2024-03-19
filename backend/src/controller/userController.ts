@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import User from 'models/user.models';
+import User from '../models/user.models';
 import { z } from 'zod';
 const createUser = async (req: Request, res: Response) => {
   try {

@@ -1,6 +1,6 @@
-import { createUser, getUser, updateUser } from 'controller/userController';
+import { createUser, getUser, updateUser } from '../controller/userController';
 import express from 'express';
-import { jwtCheck, jwtParse } from 'middleware/auth';
+import { jwtCheck, jwtParse } from '../middleware/auth';
 
 const router = express.Router();
 
