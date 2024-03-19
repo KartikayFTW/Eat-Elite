@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import {
   DropdownMenu,
@@ -11,6 +12,7 @@ import useLogin from '@/hooks/useLogin';
 
 const UserNavMenu = () => {
   const { user, logoutHandler } = useLogin();
+  const navigate = useNavigate();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -22,7 +24,9 @@ const UserNavMenu = () => {
       <DropdownMenuContent>
         <DropdownMenuLabel>Hi , {user?.name}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>User Profile</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => navigate('/user-profile')}>
+          User Profile
+        </DropdownMenuItem>
         <DropdownMenuItem onClick={logoutHandler}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

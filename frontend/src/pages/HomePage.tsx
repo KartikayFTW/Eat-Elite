@@ -35,7 +35,6 @@ const HomePage = () => {
           <img src={AppDownload} />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

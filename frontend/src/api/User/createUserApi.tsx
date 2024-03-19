@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
-export const useCreateUser = () => {
+const useCreateUser = () => {
   const { getAccessTokenSilently } = useAuth0();
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -50,3 +50,5 @@ export const useCreateUser = () => {
     isSuccess,
   };
 };
+
+export default useCreateUser;
