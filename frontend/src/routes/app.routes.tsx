@@ -1,4 +1,3 @@
-import Hero from '@/components/Hero';
 import AppLayout from '@/layouts/AppLayout';
 import AuthCallbackPage from '@/pages/AuthCallbackPage';
 import HomePage from '@/pages/HomePage';

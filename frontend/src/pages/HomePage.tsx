@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Phone from '@/assets/landing.png';
 import AppDownload from '@/assets/appDownload.png';
-import Footer from '@/components/Footer';
 
 const HomePage = () => {
   return (
