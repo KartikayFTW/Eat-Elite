@@ -1,7 +1,8 @@
 import express, { Response } from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import userRouter from './src/routes/userRoutes';
+import userRouter from './routes/userRoutes';
+import restaurantRouter from './routes/restaurantRoutes';
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.get('/health', (_, res: Response) => {
 });
 
 app.use('/api/user', userRouter);
+app.use('/api/restaurent', restaurantRouter);
 
 export { app };
