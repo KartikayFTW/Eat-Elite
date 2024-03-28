@@ -39,7 +39,6 @@ const UserProfileForm = ({
   currentUser,
   isUserDetailsLoading,
 }: Props) => {
-  console.log('currentUser', currentUser);
   const form = useForm<userFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: currentUser,
@@ -53,7 +52,7 @@ const UserProfileForm = ({
     return (
       <div className="">
         <div className="flex justify-center items-center  ">
-          <div className="space-y-4 rounded-lg p-10 flex flex-col bg-white shadow-2xl ">
+          <div className="space-y-4  p-10 flex flex-col bg-gray-50 rounded-lg ">
             <div className="flex flex-col gap-2 ml-10">
               <Skeleton className="h-4 w-[250px]" />
               <Skeleton className="h-4 w-[250px]" />
@@ -103,7 +102,7 @@ const UserProfileForm = ({
       <div className="flex justify-center items-center ">
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-4 bg-white shadow-2xl rounded-lg p-10 flex flex-col "
+          className="space-y-4 bg-gray-50  rounded-lg p-10 flex flex-col "
         >
           <div className="flex flex-col gap-2 ml-10">
             <h1 className="text-3xl">User Profile Details</h1>
