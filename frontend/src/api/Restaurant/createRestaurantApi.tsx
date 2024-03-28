@@ -43,6 +43,7 @@ const useCreateRestaurant = () => {
     isError,
     error,
     isSuccess,
+    reset,
   } = useMutation({
     mutationFn: createRestaurantRequest,
     onSuccess: () => {
