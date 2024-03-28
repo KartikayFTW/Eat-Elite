@@ -2,6 +2,7 @@ import express from 'express';
 import {
   createRestaurant,
   getRestaurant,
+  updateRestaurant,
 } from '../controller/restaurantController';
 import multer from 'multer';
 import { jwtCheck, jwtParse } from '../middleware/auth';
@@ -27,5 +28,13 @@ router.post(
   createRestaurant,
 );
 router.get('/', jwtCheck, jwtParse, upload.single('imageUrl'), getRestaurant);
+router.put(
+  '/update',
+  jwtCheck,
+  jwtParse,
+  upload.single('imageUrl'),
+  validateMiddleware(createRestaurantSchema),
+  updateRestaurant,
+);
 
 export default router;
