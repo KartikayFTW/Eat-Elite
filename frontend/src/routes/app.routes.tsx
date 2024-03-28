@@ -1,6 +1,7 @@
 import AppLayout from '@/layouts/AppLayout';
 import AuthCallbackPage from '@/pages/AuthCallbackPage';
 import HomePage from '@/pages/HomePage';
+import ManageRestaurantPage from '@/pages/ManageRestaurantPage';
 import UserProfilePage from '@/pages/UserProfilePage';
 import { Route, Routes } from 'react-router-dom';
 
@@ -21,6 +22,14 @@ const AppRoutes = () => {
         element={
           <AppLayout>
             <UserProfilePage />
+          </AppLayout>
+        }
+      />
+      <Route
+        path="/manage-restaurant"
+        element={
+          <AppLayout>
+            <ManageRestaurantPage />
           </AppLayout>
         }
       />

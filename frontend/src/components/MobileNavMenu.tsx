@@ -15,6 +15,10 @@ const MobileNavMenu = () => {
         </Avatar>
         <span className="font-bold text-black text-md">Hi , {user?.name}</span>
         <span onClick={() => navigate('/user-profile')}>User Profile</span>
+        <span onClick={() => navigate('/manage-restaurant')}>
+          Manage Restaurant
+        </span>
+
         <Button variant={'default'} onClick={logoutHandler}>
           Logout
         </Button>

@@ -12,13 +12,16 @@ import useLogin from '@/hooks/useLogin';
 
 const UserNavMenu = () => {
   const { user, logoutHandler } = useLogin();
+
   const navigate = useNavigate();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
-          <AvatarImage src={user?.picture} alt="user profile picture" />
-          <AvatarFallback>User</AvatarFallback>
+          {user && user.picture && (
+            <AvatarImage src={user.picture} alt="user profile picture" />
+          )}
+          <AvatarFallback>user</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -26,6 +29,9 @@ const UserNavMenu = () => {
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => navigate('/user-profile')}>
           User Profile
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => navigate('/manage-restaurant')}>
+          Manage Restaurant
         </DropdownMenuItem>
         <DropdownMenuItem onClick={logoutHandler}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
