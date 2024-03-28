@@ -10,7 +10,6 @@ import { MenuItemsSection } from './MenuItemsSection';
 import { ImageSection } from './ImageSection';
 import { LoadingButton } from '@/components/LoadingButton';
 import { Button } from '@/components/ui/button';
-import useGetRestaurant from '@/api/Restaurant/getRestaurantApi';
 import { useEffect } from 'react';
 
 const formSchema = z
